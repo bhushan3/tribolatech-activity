@@ -56,12 +56,6 @@
 	--border-radius: 0;
 	--shadow: 0 0 0 0.125em #000;
 	--shadow-hover: 0 0 0 0.125em #000;
-	*,
-	*::before,
-	*::after {
-		transition-duration: 0s !important;
-		transition-delay: 0s !important;
-	}
 }
 
 // Generics
@@ -72,6 +66,10 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	[data-theme='contrast'] {
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+	}
 }
 html {
 	font-size: 16px;
@@ -150,6 +148,7 @@ img {
 }
 .btn {
 	$block: &;
+
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -337,10 +336,10 @@ img {
 // Card
 // -----------------------------------------------------------------------------
 .card {
+	transition: all var(--transition);
 	border-radius: var(--border-radius);
 	background: var(--color-card-bg);
 	box-shadow: var(--shadow);
-	transition: all var(--transition);
 	&__header {
 		padding: 1.5em 2em;
 		font-size: var(--font-size-h6);
