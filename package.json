@@ -1,0 +1,39 @@
+{
+	"name": "tribolatech-activity",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"start": "gulp",
+		"build": "gulp build",
+		"clean": "gulp clean"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@babel/core": "^7.18.10",
+		"@babel/preset-env": "^7.18.10",
+		"autoprefixer": "^10.4.8",
+		"browser-sync": "^2.27.10",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-postcss": "^9.0.1",
+		"gulp-sass": "^5.1.0",
+		"node-sass": "^7.0.1",
+		"normalize.css": "^8.0.1",
+		"postcss": "^8.4.16",
+		"stylelint": "^14.10.0",
+		"stylelint-config-property-sort-order-smacss": "^9.0.0",
+		"stylelint-config-standard-scss": "^5.0.0",
+		"stylelint-order": "^5.0.0"
+	},
+	"browserslist": [
+		"defaults"
+	],
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	}
+}

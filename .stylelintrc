@@ -1,0 +1,76 @@
+{
+	"ignoreFiles": "./dist/**",
+	"plugins": ["stylelint-order"],
+	"extends": ["stylelint-config-property-sort-order-smacss", "stylelint-config-standard-scss"],
+	"rules": {
+		"alpha-value-notation": "number",
+		"color-function-notation": "legacy",
+		"color-hex-case": "lower",
+		"color-hex-length": "short",
+		"custom-property-pattern": [
+			"^[a-z]+(-[a-z]+)*",
+			{
+				"message": "Custom property name should use lowercase and separate words with hyphens (custom-property-pattern)"
+			}
+		],
+		"font-family-name-quotes": "always-unless-keyword",
+		"function-url-quotes": "always",
+		"indentation": "tab",
+		"linebreaks": "unix",
+		"max-line-length": [
+			120,
+			{
+				"ignore": "non-comments",
+				"ignorePattern": ["/(https?: //[0-9,a-z]*.*)|(^description\\:.+)|(^tags\\:.+)/i"]
+			}
+		],
+		"number-max-precision": 10,
+		"property-no-vendor-prefix": [
+			true,
+			{
+				"ignoreProperties": "appearance"
+			}
+		],
+		"rule-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"after-rule",
+					"after-single-line-comment",
+					"inside-block-and-after-rule",
+					"inside-block",
+					"first-nested"
+				],
+				"ignore": ["after-comment", "first-nested", "inside-block"]
+			}
+		],
+		"selector-class-pattern": [
+			"^[a-z]+(-[a-z]+)*",
+			{
+				"message": "Selector class should use lowercase and separate words with hyphens (selector-class-pattern)"
+			}
+		],
+		"string-quotes": [
+			"single",
+			{
+				"avoidEscape": false
+			}
+		],
+		"value-keyword-case": [
+			"lower",
+			{
+				"camelCaseSvgKeywords": true
+			}
+		],
+		"value-list-max-empty-lines" : 1,
+
+		"scss/comment-no-empty": null,
+		"scss/double-slash-comment-empty-line-before": [
+			"always",
+			{
+				"except": ["first-nested", "inside-block"],
+				"ignore": ["between-comments", "stylelint-commands", "inside-block"]
+			}
+		]
+	}
+}
